@@ -1,0 +1,8 @@
+#!/bin/bash
+. ~/.aws/.init_book_session
+
+aws s3 ls $S3_BOOK_LOCATION > library
+sed -i '' 's/^ *PRE.*$//g' library                                               # remove dir lines at top
+sed -i '' 's/.*\.gitignore.*$//g' library
+sed -i '' '/^$/d' library                                                        # remove empty lines
+sed -i '' 's/^[0-9]*-[0-9]*-[0-9]*\ [0-9]*:[0-9]*:[0-9]*\ *[0-9]*\ //g' library  # remove date and file size

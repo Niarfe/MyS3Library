@@ -1,0 +1,4 @@
+#!/bin/bash -x
+. ~/.aws/.init_book_session > /dev/null 1>&2
+
+aws s3 cp ${S3_BOOK_LOCATION}$1 bookshelf/
