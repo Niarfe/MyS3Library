@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cat <<_H
+
+    to check out a book
+        grep -i <term> library | xargs do/pull
+
+    push a book
+        cp <source path> bookshelf/
+        do/sync
+
+    sync up library list
+        do/update_library
+
+    to see commands available
+        do/<tab><tab>
+_H
+
+
