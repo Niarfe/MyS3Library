@@ -1,0 +1,3 @@
+#!/bin/bash -x
+
+mv ~/Downloads/9*.pdf bookshelf/
