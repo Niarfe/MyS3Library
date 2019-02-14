@@ -1,0 +1,3 @@
+#!/bin/bash
+
+open bookshelf/$(ls bookshelf/ | grep -i $1)
