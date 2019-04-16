@@ -1,4 +1,5 @@
 
+.DS_Store
 00_BaMI-Introduction.pdf
 0199740445.pdf
 01_BaMI-HTM-Overview.pdf
@@ -202,7 +203,6 @@
 9781786463517-SCIENTIFIC_COMPUTING_WITH_PYTHON_3.pdf
 9781786463708-LEARNING_PYSPARK.pdf
 9781786463890-PHP_7_DATA_STRUCTURES_AND_ALGORITHMS.pdf
-<<<<<<< HEAD
 9781786464392-ARTIFICIAL_INTELLIGENCE_WITH_PYTHON (1).pdf
 9781786464392-ARTIFICIAL_INTELLIGENCE_WITH_PYTHON.pdf
 9781786464453-PYTHON_DEEP_LEARNING.pdf
@@ -210,12 +210,6 @@
 9781786465153-R_DATA_STRUCTURES_AND_ALGORITHMS.pdf
 9781786466198-BEGINNING_C_GAME_PROGRAMMING.pdf
 9781786466204-GO_DESIGN_PATTERNS.pdf
-=======
-9781786464392-ARTIFICIAL_INTELLIGENCE_WITH_PYTHON.pdf
-9781786464477-PYTHON_MACHINE_LEARNING_COOKBOOK.pdf
-9781786465153-R_DATA_STRUCTURES_AND_ALGORITHMS.pdf
-9781786466198-BEGINNING_C_GAME_PROGRAMMING.pdf
->>>>>>> 25780d206de015dc4e264495503895be15c028f3
 9781786466518-SMART_INTERNET_OF_THINGS_PROJECTS.pdf
 9781786466587-BUILDING_MACHINE_LEARNING_PROJECTS_WITH_TENSORFLOW.pdf
 9781786467355-PYTHON_DATA_STRUCTURES_AND_ALGORITHMS.pdf
@@ -226,11 +220,8 @@
 9781786468734-MASTERING_JAVA_9.pdf
 9781786468949-GO_PROGRAMMING_BLUEPRINTS_SECOND_EDITION.pdf
 9781786469250-MODERN_PYTHON_COOKBOOK.pdf
-<<<<<<< HEAD
 9781786469786-DEEP_LEARNING_WITH_TENSORFLOW.pdf
 9781786469946-LEARNING_VUEJS_2.pdf
-=======
->>>>>>> 25780d206de015dc4e264495503895be15c028f3
 9781787121706-MASTERING_C_MULTITHREADING.pdf
 9781787124660-JAVASCRIPT_FUNCTIONAL_PROGRAMMING_FOR_JAVASCRIPT_DEVELOPERS.pdf
 9781787125230-CONTINUOUS_DELIVERY_WITH_DOCKER_AND_JENKINS.pdf
@@ -247,9 +238,12 @@
 9781787283367-GETTING_STARTED_WITH_KUBERNETES_SECOND_EDITION.pdf
 9781787284586-DATA_SCIENCE_ALGORITHMS_IN_A_WEEK.pdf
 9781787285378-LEARNING_CONCURRENCY_IN_PYTHON.pdf
+9781788290678-STATISTICS_FOR_DATA_SCIENCE.pdf
 9781788290920-VUEJS_2_AND_BOOTSTRAP_4_WEB_DEVELOPMENT.pdf
+9781788293334-MASTERING_GEOSPATIAL_ANALYSIS_WITH_PYTHON_.pdf
 9781788293464-VUEJS_2X_BY_EXAMPLE.pdf
 9781788295758-STATISTICS_FOR_MACHINE_LEARNING.pdf
+9781788297684-PRACTICAL_COMPUTER_VISION.pdf
 9781788396646-DEVOPS_WITH_KUBERNETES.pdf
 9781788398558-HANDSON_DATA_STRUCTURES_AND_ALGORITHMS_WITH_JAVASCRIPT.pdf
 9781788472173-_ARTIFICIAL_INTELLIGENCE_FOR_BIG_DATA.pdf
@@ -264,9 +258,12 @@
 9781789135404-HANDSON_DATA_VISUALIZATION_WITH_BOKEH.pdf
 9781789341096-MASTERING_VIM.pdf
 9781789347999-MACHINE_LEARNING_ALGORITHMS_SECOND_EDITION.pdf
+9781789349108-APACHE_SPARK_QUICK_START_GUIDE.pdf
+9781789533835-PROFESSIONAL_SCALA.pdf
 9781789535464-LEARNING_POSTGRESQL_11.pdf
 9781789535907-BEGINNING_PHP.pdf
 9781789616606-MASTERING_DOCKER_THIRD_EDITION.pdf
+9781789800104-ADVANCED_JAVASCRIPT.pdf
 9781789801910_Code.zip
 9781789954531-ARCHITECTS_OF_INTELLIGENCE.pdf
 9781847194947-EXPERT_PYTHON_PROGRAMMING.pdf
@@ -355,9 +352,11 @@ Data Visualization with D3.js Cookbook.pdf
 Data_Analytics_with_Hadoop.pdf
 Data_Science_from_Scratch (2017-03-22T19_13_47.712).pdf
 Data_Science_from_Scratch.pdf
+Data_Visualization_with_D3dotjs_Cookbook.pdf
 Deep_Learning_with_Python.pdf
 Designing Machine Learning Systems with Python.pdf
 DevOps Automation Cookbook [eBook].pdf
+Diego_Camacho (1).pdf
 Docker_ Up & Running.pdf
 Docker_Up_and_Running.pdf
 Doing Data Science.pdf
@@ -372,7 +371,7 @@ Eloquent_JavaScript.pdf
 Essentials_Games_v1.pdf
 ExactDecodingPhraseBasedTranslationModels.pdf
 FLASK_BY_EXAMPLE.pdf
-Fast Data Processing with Spark, 2nd Edition.pdf
+Fast_Data_Processing_with_Spark_2nd_Edition.pdf
 Flask Web Development.pdf
 From_Python_to_Numpy.pdf
 Fundamental_Deep_Learning_Preview_Zaloni.pdf
@@ -387,7 +386,6 @@ HTML5_GAMES_DEVELOPMENT_BY_EXAMPLE_BEGINNERS_GUI.pdf
 Hands_On_Machine_Learning_with_Scikit_Learn_and_TensorFlow.pdf
 Head First Java, 2nd Edition.pdf
 Hierarchical_Temporal_Memory_using_Memristor_Networks-A_Survey.pdf
-High_Performance_Spark (1).pdf
 High_Performance_Spark.pdf
 Hopcroft_Introduction_to_Automata_Theory_Languages_and_Computation.pdf
 Hopfield.pdf
@@ -397,7 +395,9 @@ INSTANT_MINECRAFT_PI_EDITION_CODING_HOWTO.pdf
 IPYTHON_INTERACTIVE_COMPUTING_AND_VISUALIZATION_.pdf
 ISLR First Printing.pdf
 Instant Web Scraping with Java.pdf
+Instant_Flask_Web_Development.pdf
 IntelliJIDEA_ReferenceCard_mac.pdf
+Introducing_Elixir.pdf
 JAVA_7_NEW_FEATURES_COOKBOOK.pdf
 JAVA_WEB_SERVICES.pdf
 Java Test-Driven Development.pdf
@@ -420,6 +420,7 @@ LEARNING_VUEJS_2.pdf
 LIBGDX_GAME_DEVELOPMENT_BY_EXAMPLE.pdf
 LINUX_SHELL_SCRIPTING_COOKBOOK_SECOND_EDITION.pdf
 LM101-013-MEMO.pdf
+Learning_PHP_MySQL_JavaScript_CSS_and_HTML5_Third_Edition.pdf
 Learning_Python_Design_Patter_1stEd.pdf
 Learning_Python_Design_Patterns_Second_Edition.pdf
 Learning_Spark.pdf
@@ -434,12 +435,13 @@ MASTERING_SOCIAL_MEDIA_MINING_WITH_PYTHON.pdf
 MODULAR_PROGRAMMING_WITH_PYTHON.pdf
 MYSQL_FOR_PYTHON.pdf
 MacOSX3e_Ch7_AppleScript.pdf
-Machine Learning with Spark.pdf
 Machine_Learning_for_Email.pdf
 Machine_Learning_in_Action.pdf
+Machine_Learning_with_Spark.pdf
 Make_Getting_Started_with_p5dotjs.pdf
 Mastering Gradle.pdf
 Mastering Social Media Mining with R [eBook].pdf
+Mind_Performance_Hacks.pdf
 Mining the Social Web, Second Edition - Russell, Matthew A.pdf
 Mining_of_Massive_Datasets.pdf
 MySQL_Cookbook_3rd_Edition.pdf
@@ -476,9 +478,12 @@ Practical Data Science Cookbook.pdf
 Practical Machine Learning [eBook].pdf
 Pragmatic Unit Testing in Java 8 with JUnit.pdf
 Pragmatic Unit Testing in Java with JUnit.pdf
+Principles_of_Object_Oriented_JavaScript.pdf
 Programming Collective Intelligence.pdf
+Programming-in-Scala.pdf
 Programming_Collective_Intelligence.pdf
 Programming_PHP_3rd_Edition.pdf
+Programming_in_Scala_3rd_Edition.pdf
 Python Automation Cookbook [eBook].pdf
 Python For Data Analysis (2017-03-01T01_01_36.375).pdf
 Python For Data Analysis.pdf
@@ -487,6 +492,7 @@ Python Playground.pdf
 Python Tricks.pdf
 Python Unlocked [eBook].pdf
 Python and Tkinter Programming (2000).pdf
+Python_Forensics.pdf
 Quality_Engineer_JD.pdf
 Quick-Start-Action-Plan-Workbook.pdf
 R-intro.pdf
@@ -501,8 +507,11 @@ SCIKITLEARN_COOKBOOK.pdf
 SMART_INTERNET_OF_THINGS_PROJECTS.pdf
 STATISTICAL_ANALYSIS_WITH_R.pdf
 STATISTICS_FOR_MACHINE_LEARNING.pdf
+Scala_for_the_Impatient_2nd_Edition_2017.pdf
+SciPy_and_NumPy.pdf
 Skill Up Report 2016 [eBook].pdf
 SonarQube.pdf
+Statistics_in_a_Nutshell_Second_Edition.pdf
 Syngress.The.Basics.of.Hacking.and.Penetration.Testing.Aug.2011.pdf
 TENSORFLOW_MACHINE_LEARNING_COOKBOOK.pdf
 TKINTER_GUI_APPLICATION_DEVELOPMENT_BLUEPRINTS.pdf
@@ -511,6 +520,7 @@ The Art of Debugging.pdf
 The Cucumber for Java Book.pdf
 The Principles of Object-Oriented JavaScript.pdf
 Think_Bayes.pdf
+Think_Complexity.pdf
 Thoughtful Machine Learning.pdf
 UNTANGLE_NETWORK_SECURITY.pdf
 Understanding Computation.pdf
@@ -519,6 +529,7 @@ VUEJS_2_COOKBOOK.pdf
 Violent Python - A Cookbook for Hackers, Forensic Analysts, Penetration Testers and Security Engineers.pdf
 VuejsUpRunningCh1-2Excerpt.pdf
 WEB_DEVELOPMENT_WITH_DJANGO_COOKBOOK.pdf
+Webbots_Spiders_and_Screen_Scrapers_Second_Edition.pdf
 What You Need to Know about Docker [eBook].pdf
 What You Need to Know about JavaScript [eBook].pdf
 What you need to know about R [eBook].pdf
@@ -617,6 +628,7 @@ real-world-kanban_p1_0.pdf
 rediscovering-javascript_p1_0.pdf
 regex-cheatsheet.pdf
 scripted-gui-testing-with-ruby_p1_1.pdf
+sed_and_awk_Second_Edition.pdf
 seke07.pdf
 semantic-folding-theory-white-paper.pdf
 seven-languages-in-seven-weeks_p1_0.pdf
@@ -629,6 +641,7 @@ tbd_1611.02788.pdf
 tbd_1706.04313.pdf
 tbd_icml2017-schemas.pdf
 the-big-data-market.pdf
+the-ray-tracer-challenge_p1_0.pdf
 thinkapjava.pdf
 tmux_p3_0.pdf
 understanding-machine-learning-theory-algorithms.pdf
@@ -638,4 +651,8 @@ what-is-artificial-intelligence.pdf
 wikifier.pdf
 working-with-tcp-sockets_p1_0.pdf
 writing_a_compiler_in_go_1.0.pdf
+writing_a_compiler_in_go_1.1.pdf
+writing_a_compiler_in_go_1.1.zip
 writing_an_interpreter_in_go_1.5.pdf
+writing_an_interpreter_in_go_1.6.pdf
+writing_an_interpreter_in_go_1.6.zip
