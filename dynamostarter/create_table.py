@@ -37,6 +37,7 @@ try:
         }
     )
     print("Table created successfully!")
+
 except Exception as e:
     print("Error creating table:")
     print(e)
