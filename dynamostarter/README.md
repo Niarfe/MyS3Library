@@ -2,6 +2,9 @@
 Went through the [dynamo booklist](https://aws.amazon.com/getting-started/projects/create-manage-nonrelational-database-dynamodb/) tutorial.
 Here's my notes for staring a end-2-end walkthrough.
 
+## Sources
+* [Link to boto3 docs on dynamo](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html)
+
 ## Setting up requirements
 * Choose your zone, if you don't watch it you can end up creating phantom dbs, `us-west-2`
 * Name of your db
