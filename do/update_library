@@ -1,4 +1,6 @@
 #!/bin/bash
+
+. ~/env3/bin/activate
 . ~/.aws/.init_book_session
 
 aws s3 ls $S3_BOOK_LOCATION > library
