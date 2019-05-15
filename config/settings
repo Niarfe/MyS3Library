@@ -1,0 +1,10 @@
+# Bucket locations
+export S3_BOOK_LOCATION=s3://eolibrary/books/
+export S3_CODE_LOCATION=s3://eolibrary/code/
+
+# alias
+alias asls='aws s3 ls '
+alias ascp='aws s3 cp '
+alias asmv='aws s3 mv '
+alias asmb='aws s3 mb '
+alias asnc='aws s3 sync '
