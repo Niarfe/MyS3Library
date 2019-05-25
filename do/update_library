@@ -8,3 +8,5 @@ sed -i '' 's/.*\.gitignore.*$//g' library                                       
 sed -i '' 's/.*\.DS_Store$//g' library                                           # remove gitignore file
 sed -i '' 's/^[0-9]*-[0-9]*-[0-9]*\ [0-9]*:[0-9]*:[0-9]*\ *[0-9]*\ //g' library  # remove date and file size
 sed -i '' '/^$/d' library                                                        # remove empty lines
+
+aws s3 ls $S3_CODE_LOCATION > clibrary

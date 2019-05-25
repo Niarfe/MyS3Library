@@ -2,4 +2,5 @@
 . ~/.aws/.init_book_session
 
 find . -name ._\* -delete
-aws s3 rm s3://eolibrary/books/$1
+echo ${S3_CODE_LOCATION}
+aws s3 ls ${S3_CODE_LOCATION} 
