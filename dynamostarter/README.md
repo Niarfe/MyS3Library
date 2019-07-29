@@ -1,6 +1,4 @@
-# Self Getting Started with DynamoDB
-Went through the [dynamo booklist](https://aws.amazon.com/getting-started/projects/create-manage-nonrelational-database-dynamodb/) tutorial.
-Here's my notes for staring a end-2-end walkthrough.
+# Self Getting Started with DynamoDB Went through the [dynamo booklist](https://aws.amazon.com/getting-started/projects/create-manage-nonrelational-database-dynamodb/) tutorial.  Here's my notes for staring a end-2-end walkthrough.
 
 ## Sources
 * [Link to boto3 docs on dynamo](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html)
@@ -28,4 +26,9 @@ Here's my notes for staring a end-2-end walkthrough.
 * `update_item.py`
  
 
+## Terraform
+* Example from [Link:Resource: aws_dynamodb_table](https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html)
+* File copied from there, `terra_table.tf`, is an example.  I tried it with my account.
+    - Export the AWS keys into the env space first.
+    - Note the attributes in the tf file, the two keys are required, but the columns are created with the attributes.
 
