@@ -1,7 +1,6 @@
 #!/bin/bash 
 
-
-# first parm is book name, if not have it, download it
+# if not have it, download it
 if [ ! -f bookshelf/$1 ];then
   echo Downloading $1 from s3...
   . ~/.aws/.init_book_session > /dev/null 1>&2
@@ -9,10 +8,4 @@ if [ ! -f bookshelf/$1 ];then
   echo Done!
 else
   echo $1 already present
-fi
-
-
-# -o flag to open the file
-if [ "$2" = "-o" ];then
-  open bookshelf/$1
 fi
