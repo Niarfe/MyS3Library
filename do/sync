@@ -3,4 +3,4 @@
 
 find . -name ._\* -delete
 aws s3 sync bookshelf/ $S3_BOOK_LOCATION
-aws s3 sync code_zips/ ${S3_CODE_LOCATION} 
+aws s3 sync code_zips/ $S3_CODE_LOCATION 
