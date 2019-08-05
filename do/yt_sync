@@ -1,0 +1,5 @@
+#!/bin/bash
+. ~/.aws/.init_book_session
+
+find . -name ._\* -delete
+aws s3 sync yt_music_shelf_mp4/ s3://eo-ytvids/ 

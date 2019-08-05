@@ -2,3 +2,4 @@ boto3
 awscli
 youtube-dl
 pafy
+AudioConverter
