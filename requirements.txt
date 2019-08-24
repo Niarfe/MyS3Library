@@ -3,3 +3,4 @@ awscli
 youtube-dl
 pafy
 AudioConverter
+PyPDF2
