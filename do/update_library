@@ -3,10 +3,20 @@
 . ~/.aws/.init_book_session
 
 aws s3 ls $S3_BOOK_LOCATION > library
-sed -i '' 's/^ *PRE.*$//g' library                                               # remove dir lines at top
-sed -i '' 's/.*\.gitignore.*$//g' library                                        # remove gitignore file
-sed -i '' 's/.*\.DS_Store$//g' library                                           # remove gitignore file
-sed -i '' 's/^[0-9]*-[0-9]*-[0-9]*\ [0-9]*:[0-9]*:[0-9]*\ *[0-9]*\ //g' library  # remove date and file size
-sed -i '' '/^$/d' library                                                        # remove empty lines
+
+if [[ "$OSTYPE" == "linux-gnu" ]];then
+    sed -i 's/^ *PRE.*$//g' library                                               # remove dir lines at top
+    sed -i 's/.*\.gitignore.*$//g' library                                        # remove gitignore file
+    sed -i 's/.*\.DS_Store$//g' library                                           # remove gitignore file
+    sed -i 's/^[0-9]*-[0-9]*-[0-9]*\ [0-9]*:[0-9]*:[0-9]*\ *[0-9]*\ //g' library  # remove date and file size
+    sed -i '/^$/d' library                                                        # remove empty lines
+else
+    sed -i '' 's/^ *PRE.*$//g' library                                               # remove dir lines at top
+    sed -i '' 's/.*\.gitignore.*$//g' library                                        # remove gitignore file
+    sed -i '' 's/.*\.DS_Store$//g' library                                           # remove gitignore file
+    sed -i '' 's/^[0-9]*-[0-9]*-[0-9]*\ [0-9]*:[0-9]*:[0-9]*\ *[0-9]*\ //g' library  # remove date and file size
+    sed -i '' '/^$/d' library                                                        # remove empty lines
+fi
+  
 
 aws s3 ls $S3_CODE_LOCATION > clibrary
