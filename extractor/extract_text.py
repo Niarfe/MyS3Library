@@ -23,18 +23,28 @@ def write_to_json_file(d_pages, filename):
 def pdf_to_text(source_file_path):
     cmd = "pdftotext {}".format(source_file_path)
     os.system(cmd)
-    
+
+def get_list_of_extracted_files():
+    os.system("aws s3 ls s3://eolibrary/extractedbooks/ > extracted.txt")
+    with open('extracted.txt', 'r') as source:
+        extracted = [line.replace('.txt', '.pdf').split(' ')[-1].strip() for line in source]
+    return extracted
+
 def main(file_list):
+    extracted = get_list_of_extracted_files()
     with open(file_list, 'r') as source:
         for idx, fname_raw in enumerate(source):
             fname = fname_raw.strip()
             if not fname.endswith(".pdf"):
-                print("Non pdf, skipping: {}".format(fname))
+                print("\tNOT PDF, skipping: {}".format(fname))
                 continue
-            deja_vu = os.system("aws s3 ls s3://eolibrary/extractedbooks/{}".format(fname.replace('.pdf', '.txt')))
-            if deja_vu == 0:
+            if fname in extracted:
                 print("\tDEJA_VU {}".format(fname))
                 continue
+#            deja_vu = os.system("aws s3 ls s3://eolibrary/extractedbooks/{}".format(fname.replace('.pdf', '.txt')))
+#            if deja_vu == 0:
+#                print("\tDEJA_VU {}".format(fname))
+#                continue
             cmds = [
                     "echo == STARTING # {} ===".format(idx),
                     "aws s3 cp s3://eolibrary/books/{} .".format(fname),
