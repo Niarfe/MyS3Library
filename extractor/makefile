@@ -17,7 +17,7 @@ output/seeit.csv:  dupes # inspect the contents of keywords arranged, with keywo
 	. env/bin/activate; python bin/viewkeys.py output/keywords_listing.csv 100 > output/seeit.csv
 	vim output/seeit.csv
 
-clear:
-	rm putput/*
+clean:
+	rm output/*
 
 

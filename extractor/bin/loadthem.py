@@ -1,6 +1,6 @@
 """
-This script takes a bucket of extracted text files and generates the 
-theseus 'background' then gets the highest frequency words per book 
+This script takes a bucket of extracted text files and generates the
+theseus 'background' then gets the highest frequency words per book
 against the background
 
 Input:
@@ -38,7 +38,7 @@ def load_only(fname, _idx=-1):
                 docs.append(line.split())
                 name = line.split(',')[1]
                 # print("Loaded line {}, named {}".format(idx, name))
-                return node.Node(docs, name) 
+                return node.Node(docs, name)
 
 def load_both(fname):
     print("load both {}".format(fname))
@@ -51,17 +51,17 @@ def load_both(fname):
                 print("pop")
                 continue
             elif len(row) == 3:
-                words = row['keywords'] 
+                words = row['keywords']
             else:
                 raise Exception("batafuco!")
-            sidx = row['id'] 
-            name = row['name'] 
-            idx = int(sidx) 
+            sidx = row['id']
+            name = row['name']
+            idx = int(sidx)
             words = words.split()
             # print(idx, name, words)
             if idx % 100 == 0:
                 print(idx)
-            
+
             docs.append(words)
             ndic[idx] = node.Node([words], name)
 
@@ -73,9 +73,9 @@ if __name__ == "__main__":
 
     _source_file = 'all.csv'
     _ratio = 0.2
-
+    print("load_both from background and nodes from {}".format(_source_file))
     back, ndic = load_both(_source_file)
-    print("Begin final pass")
+    print("done loading, start keyword extraction for {} nodes".format(len(ndic)))
     with open('output/keywords_listing.csv', 'w') as target:
         target.write("id,name,keywords\n")
         for idx, node in ndic.items():
@@ -83,4 +83,5 @@ if __name__ == "__main__":
                 idx, node.name, " ".join(node.create_profile(back, ratio=_ratio))
                 )
             )
-            print(idx) 
+            if idx % 100 == 0:
+                print(idx)
