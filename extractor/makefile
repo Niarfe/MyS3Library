@@ -3,7 +3,7 @@ default:
 
 
 extract:
-	python extract_text.py --source ../library
+	python bin/extract_text.py --source ../library
 
 content:  output/content.csv
 keywords: output/keywords_listing.csv
