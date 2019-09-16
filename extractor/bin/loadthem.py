@@ -51,7 +51,7 @@ def load_both(fname):
                 print("pop")
                 continue
             elif len(row) == 3:
-                words = row['keywords']
+                words = row['content']
             else:
                 raise Exception("batafuco!")
             sidx = row['id']
@@ -71,7 +71,7 @@ def load_both(fname):
 
 if __name__ == "__main__":
 
-    _source_file = 'all.csv'
+    _source_file = 'output/content.csv'
     _ratio = 0.2
     print("load_both from background and nodes from {}".format(_source_file))
     back, ndic = load_both(_source_file)
@@ -79,6 +79,7 @@ if __name__ == "__main__":
     with open('output/keywords_listing.csv', 'w') as target:
         target.write("id,name,keywords\n")
         for idx, node in ndic.items():
+            print(idx, node.name)
             target.write("{},{},{}\n".format(
                 idx, node.name, " ".join(node.create_profile(back, ratio=_ratio))
                 )

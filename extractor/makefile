@@ -1,11 +1,21 @@
 default:
 	cat makefile
 
+
+extract:
+	python extract_text.py --source ../library
+
+content:  output/content.csv
 keywords: output/keywords_listing.csv
 dupes:    output/dupes.txt
 seeit:    output/seeit.csv
 
 ######################
+output/content.csv:
+	bash bin/download_extracted_content.sh
+	python bin/create_content_csv.py
+	wc -l output/content.csv
+
 output/keywords_listing.csv:
 	python bin/loadthem.py # this should take all.csv which has raw text and produce keyword_listings.txt
 
@@ -20,4 +30,5 @@ output/seeit.csv:  dupes # inspect the contents of keywords arranged, with keywo
 clean:
 	rm output/*
 
+all: extract content keywords dupes seeit
 
