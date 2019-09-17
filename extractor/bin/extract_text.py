@@ -11,8 +11,8 @@ import os
 debug = False
 def get_list_of_extracted_files():
     """Get list of extracted files, clean and replace txt->pdf, return clean list of names"""
-    os.system("aws s3 ls s3://eolibrary/extractedbooks/ > extracted.txt")
-    with open('extracted.txt', 'r') as source:
+    os.system("aws s3 ls s3://eolibrary/extractedbooks/ > output/extracted.txt")
+    with open('output/extracted.txt', 'r') as source:
         extracted = [line.replace('.txt', '.pdf').split(' ')[-1].strip() for line in source]
     return extracted
 
@@ -31,7 +31,8 @@ def main(file_list):
                     "echo == STARTING # {} ===".format(idx),
                     "aws s3 cp s3://eolibrary/books/{} .".format(fname),
                     "pdftotext {}".format(fname),
-                    "aws s3 mv {}.txt s3://eolibrary/extractedbooks/".format(fname.replace(".pdf", "")),
+                    "dos2unix {}".format(fname.replace('.pdf', '.txt')),
+                    "aws s3 mv {} s3://eolibrary/extractedbooks/".format(fname.replace(".pdf", ".txt")),
                     "rm {}".format(fname),
                     ]
             for cmd in cmds:
