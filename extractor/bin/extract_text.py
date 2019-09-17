@@ -8,6 +8,7 @@ import json
 import re
 import os
 
+debug = False
 def get_list_of_extracted_files():
     """Get list of extracted files, clean and replace txt->pdf, return clean list of names"""
     os.system("aws s3 ls s3://eolibrary/extractedbooks/ > extracted.txt")
@@ -21,10 +22,10 @@ def main(file_list):
         for idx, fname_raw in enumerate(source):
             fname = fname_raw.strip()
             if not fname.endswith(".pdf"):
-                print("\tNOT PDF, skipping: {}".format(fname))
+                if debug: print("\tNOT PDF, skipping: {}".format(fname))
                 continue
             if fname in deja_vu:
-                print("\tDEJA_VU {}".format(fname))
+                if debug: print("\tDEJA_VU {}".format(fname))
                 continue
             cmds = [
                     "echo == STARTING # {} ===".format(idx),
@@ -46,4 +47,4 @@ if __name__ == "__main__":
 
     main(args.source)
 
-    print("Done converting {}".format(args.source))
+    print("===== All text extracted from pds {}".format(args.source))

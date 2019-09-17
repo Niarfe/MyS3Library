@@ -14,6 +14,7 @@ Output:
 import theseus.node as node
 import csv
 import sys
+from collections import OrderedDict
 csv.field_size_limit(sys.maxsize)
 
 def load_all(fname):
@@ -44,9 +45,21 @@ def load_both(fname):
     print("load both {}".format(fname))
     docs = []
     ndic = {}
+
+    def _get_next(iter):
+        #try:
+        return next(iter)
+        #except Exception as e:
+        #    print("EXCEPTION: {}".format(str(e)))
+        #    raise Exception("Exception getting an element")
+
     with open(fname, 'r') as source:
+
         j_rows = csv.DictReader(source)
+        #row = next(j_rows)
         for row in j_rows:
+            if not isinstance(row, OrderedDict):
+                print("WHOA! type: {}".format(type(row)))
             if len(row) > 3:
                 print("pop")
                 continue

@@ -10,6 +10,6 @@ with open('output/'+'content.csv', 'w') as target:
     for idx, fname in enumerate(fnames):
         text = open(content_dir+fname).read()
         flat_lowercase_text = re.sub(r'\s+', ' ', text).lower().replace(',', ' ')
-        target.write("{},{},{}\n".format(idx, fname.replace('.txt', '.pdf'), flat_lowercase_text.strip()))
+        target.write("{},{},{}\n".format(idx, fname.replace('.txt', '.pdf'), flat_lowercase_text.strip().replace('\x00', '')))
         if idx % 100 == 0:
             print("done through ", idx)
