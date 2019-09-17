@@ -14,6 +14,7 @@ Output:
 import theseus.node as node
 import csv
 import sys
+from collections import OrderedDict
 csv.field_size_limit(sys.maxsize)
 
 def load_all(fname):
@@ -44,9 +45,26 @@ def load_both(fname):
     print("load both {}".format(fname))
     docs = []
     ndic = {}
+
+    def _get_next(iter):
+        #try:
+        return next(iter)
+        #except Exception as e:
+        #    print("EXCEPTION: {}".format(str(e)))
+        #    raise Exception("Exception getting an element")
+
+    safety = 800
     with open(fname, 'r') as source:
+
         j_rows = csv.DictReader(source)
+        #row = next(j_rows)
         for row in j_rows:
+            print("safety =", safety)
+            safety -= 1
+            if safety < 0:
+                row = None 
+            if not isinstance(row, OrderedDict):
+                print("WHOA! type: {}".format(type(row)))
             if len(row) > 3:
                 print("pop")
                 continue
@@ -64,6 +82,12 @@ def load_both(fname):
 
             docs.append(words)
             ndic[idx] = node.Node([words], name)
+#            try:
+#                row = _get_next(j_rows)
+#            except:
+#                print("ERROR: can not access item from iterator, skipping a book")
+#                row = next(j_rows)
+            print("just finished ", row['name'])
 
     return node.Node(docs, 'back'), ndic
 
