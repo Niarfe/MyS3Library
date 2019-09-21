@@ -66,7 +66,11 @@ if __name__ == "__main__":
 
     try:
         source_file = sys.argv[1]
-        depth = int(sys.argv[2])
+        try:
+            depth = int(sys.argv[2])
+        except:
+            depth = 5
+            print("** Using default depth number of 5 **")
     except:
         yellow("arguments: <source csv> <depth of keywords>")
         sys.exit(1)
