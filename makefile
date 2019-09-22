@@ -12,3 +12,7 @@ audo_update:
 	do/update_library
 	git diff library
 	wc -l library
+
+clean_fluff:
+	rm -rf `find . -name __pycache__`
+	find . -name __pycache__ || true
