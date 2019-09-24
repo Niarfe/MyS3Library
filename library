@@ -448,6 +448,7 @@ Fundamental_Deep_Learning_Preview_Zaloni.pdf
 Gradle_Beyond_the_Basics.pdf
 Gradle_Effective_Implementation_Guide.pdf
 Gradle_in_Action.pdf
+Graph_Algorithms_Neo4j.pdf
 GuzmanEtAl2016.1117.full.pdf
 Hands_On_Machine_Learning_with_Scikit_Learn_and_TensorFlow.pdf
 Head_First_Java__2nd_Edition.pdf
@@ -458,7 +459,6 @@ Hopfield.pdf
 How_Linux_Works_2nd_Ed.pdf
 IMPLEMENTING_LEAN_SIX_SIGMA_IN_30_DAYS.pdf
 INSTANT_MINECRAFT_PI_EDITION_CODING_HOWTO.pdf
-IPYTHON_INTERACTIVE_COMPUTING_AND_VISUALIZATION_.pdf
 ISLR_First_Printing.pdf
 Instant_Flask_Web_Development.pdf
 Instant_Web_Scraping_with_Java.pdf
@@ -528,7 +528,6 @@ R-intro.pdf
 RASPBERRY_PI_COOKBOOK_FOR_PYTHON_PROGRAMMERS.pdf
 RASPBERRY_PI_HOME_AUTOMATION_WITH_ARDUINO.pdf
 RASPBERRY_PI_PROJECTS_FOR_KIDS.pdf
-RefactoringRubyEdition.pdf
 Representative_Subsets_For_Big_Data_Lear.pdf
 Scala-Cookbook.pdf
 Scala_for_the_Impatient_2nd_Edition_2017.pdf
@@ -575,9 +574,11 @@ crf.pdf
 cssanimation-101.pdf
 cucs-002-10.pdf
 deeplearningbook.pdf
+design-patterns-ruby.pdf
 disambiguation.pdf
 disambiguation2.pdf
-effective_python.pdf
+effective-python.pdf
+effective-ruby.pdf
 efrainolivares_151118.pdf
 efrainolivares_170215.pdf
 efrainolivares_180618.pdf
@@ -629,6 +630,7 @@ modern-java-ee-design-patterns.pdf
 no.starch.press_.wicked.cool_.shell_.scripts-101.scripts.for_.linux_.mac_.os_.x.and_.unix_.systems.ebook-lib.pdf
 pandas-0.22.0.pdf
 phraseBasedTranslationModels.pdf
+practical-object-oriented-design-in-ruby.pdf
 practical-programming_p4_0.pdf
 practical-svg.pdf
 practical-vim_p1_1.pdf
@@ -648,6 +650,7 @@ raspberry_pi_home_automation_with_arduino__2nd_edition.pdf
 raspberry_pi_robotic_projects.pdf
 real-world-kanban_p1_0.pdf
 rediscovering-javascript_p1_0.pdf
+refactoring-ruby.pdf
 regex-cheatsheet.pdf
 scripted-gui-testing-with-ruby_p1_1.pdf
 sed_and_awk_Second_Edition.pdf

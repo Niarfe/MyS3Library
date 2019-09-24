@@ -1,7 +1,6 @@
 default:
 	cat makefile
 
-
 extract:  output/extracted.txt
 content:  output/content.csv
 keywords: output/keywords_listing.csv
@@ -9,9 +8,8 @@ dupes:    output/dupes.txt
 seeit:    output/seeit.csv
 
 # DETAILS
-######################
 output/extracted.txt: # Compare pdf list to txt list, and download and extract any pdfs, push content to s3
-	cd ..; do/update_library
+	../do/update_library
 	python bin/extract_text.py --source library
 
 output/content.csv: # download s3 extracted content and pipe into content.csv:|id|name|content|
@@ -23,7 +21,7 @@ output/keywords_listing.csv: # take content.csv and output keywords_listing.csv:
 	python bin/loadthem.py 
 
 output/dupes.txt: output/keywords_listing.csv # dupes.txt:|n-number-dupes name-1 name-2 name-n| plus summary at bottom 
-	. env/bin/activate; python bin/findupes_with_hydraseq.py output/keywords_listing.csv  5 > output/dupes.txt
+	. env/bin/activate; python bin/findupes_with_hydraseq.py output/keywords_listing.csv  ${DEPTH} > output/dupes.txt
 	cat output/dupes.txt
 
 output/seeit.csv:  dupes # reformat the keywords_listing.csv to put the X keywords first for viewing ease 

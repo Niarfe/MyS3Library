@@ -66,29 +66,15 @@ if __name__ == "__main__":
 
     try:
         source_file = sys.argv[1]
-        try:
-            depth = int(sys.argv[2])
-        except:
-            depth = 5
-            print("** Using default depth number of 5 **")
     except:
         yellow("arguments: <source csv> <depth of keywords>")
         sys.exit(1)
 
-    hydra = load_hydra(source_file, depth)
+    print("depth,dupes")
+    for depth in range(25):
+        hydra = load_hydra(source_file, depth)
+        links = find_duplicates(hydra)
+   
+        dupes = [link for link in links if len(link) > 1]
 
-
-    dups = find_duplicates(hydra)
-
-    total = 0
-    for idx, dup in enumerate(dups):
-        if len(dup) > 1:
-            print(len(dup),"\t", " ".join(sorted(dup)))
-        total += len(dup)
-
-    yellow("==== hydra dup search ===")
-    yellow("Proceeding with file "+source_file)
-    yellow("Required dup depth: "+str(depth))
-    yellow("Hydra with number of keys => "+str(len(hydra.columns.keys())))
-    yellow("Number of dup sets: "+str(len(dups)))
-    yellow("total number books involved: "+str(total))
+        print("{},{}".format(depth, len(dupes)))
