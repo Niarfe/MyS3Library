@@ -1,0 +1,20 @@
+clojure isa prog-lang
+scala isa prog-lang
+python isa prog-lang
+lisp isa prog-lang
+prolog isa prog-lang
+javascript isa prog-lang
+java isa prog-lang
+
+clojure isa lisp
+
+pyspark isa package
+vuejs isa package
+
+logic-programming isa subject
+deep-learning isa subject
+sequence-learning isa subject
+
+think-in-comp isa book
+think-in-comp uses prolog
+think-in-comp isabout ai
