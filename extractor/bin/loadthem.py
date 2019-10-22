@@ -1,5 +1,5 @@
 """
-This script takes a bucket of extracted text files and generates the
+This script takes a file of extracted text and generates the
 theseus 'background' then gets the highest frequency words per book
 against the background
 
@@ -45,26 +45,19 @@ def load_both(fname):
     print("load both {}".format(fname))
     docs = []
     ndic = {}
-
+ 
     def _get_next(iter):
-        #try:
         return next(iter)
-        #except Exception as e:
-        #    print("EXCEPTION: {}".format(str(e)))
-        #    raise Exception("Exception getting an element")
 
     with open(fname, 'r') as source:
 
         j_rows = csv.DictReader(source)
-        #row = next(j_rows)
         for row in j_rows:
-            if not isinstance(row, OrderedDict):
-                print("WHOA! type: {}".format(type(row)))
-            if len(row) > 3:
+            if len(row) == 3:
+                words = row['content']
+            elif len(row) > 3:
                 print("pop")
                 continue
-            elif len(row) == 3:
-                words = row['content']
             else:
                 raise Exception("batafuco!")
             sidx = row['id']
@@ -97,5 +90,3 @@ if __name__ == "__main__":
                 idx, node.name, " ".join(node.create_profile(back, ratio=_ratio))
                 )
             )
-            if idx % 100 == 0:
-                print(idx)

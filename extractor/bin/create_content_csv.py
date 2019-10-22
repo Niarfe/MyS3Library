@@ -1,16 +1,23 @@
+"""
+Given a directory with extracted text files, flatten it into one content.csv file
+Note that this just flattens text by compacting white space, no processing is done
+"""
 import os
 import re
+import string
 
-content_dir = 'content/'
+pattern = re.compile('[^\w_]+', re.UNICODE)
+#    "pattern.sub('', string.printable)" 
+input_dir = 'content/'
+output_file = 'output/content.csv'
 
-fnames = os.listdir(content_dir)
+fnames = os.listdir(input_dir)
 
-with open('output/'+'content.csv', 'w') as target:
+with open(output_file, 'w') as target:
     target.write("id,name,content\n")
     for idx, fname in enumerate(fnames):
-        text = open(content_dir+fname).read()
-        alpha_num = re.sub(r'\W+', ' ', text)
-        flat_lowercase_text = re.sub(r'\s+', ' ', alpha_num).lower()
-        target.write("{},{},{}\n".format(idx, fname.replace('.txt', '.pdf'), flat_lowercase_text.strip().replace('\x00', '')))
+        text = open(input_dir+fname).read()
+        text = pattern.sub(' ', text)
+        target.write("{},{},{}\n".format(idx, fname.replace('.txt', '.pdf'), text.strip().replace('\x00', '')))
         if idx % 100 == 0:
             print("done through ", idx)
