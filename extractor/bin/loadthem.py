@@ -12,47 +12,26 @@ Output:
 
 """
 import theseus.node as node
+from theseus.node import Node
 import csv
 import sys
 from collections import OrderedDict
 csv.field_size_limit(sys.maxsize)
 
-def load_all(fname):
-    print("load_all, called with {}".format(fname))
-    docs = []
-    with open(fname, 'r') as source:
-        for idx, line in enumerate(source):
-            if idx % 100 == 0:
-                print(idx)
-            docs.append(line.split())
-    return node.Node(docs, 'back')
 
 
-def load_only(fname, _idx=-1):
-    print("load_only: {}, _idx: {}".format(fname, _idx))
-    assert isinstance(_idx, int), "idx must be an integer"
-
-    docs = []
-    with open(fname, 'r') as source:
-        for idx, line in enumerate(source):
-            if  idx == _idx:
-                docs.append(line.split())
-                name = line.split(',')[1]
-                # print("Loaded line {}, named {}".format(idx, name))
-                return node.Node(docs, name)
-
-def load_both(fname):
-    print("load both {}".format(fname))
+def load_both(path_content):
+    print("load both {}".format(path_content))
     docs = []
     ndic = {}
- 
+    back = Node()
     def _get_next(iter):
         return next(iter)
 
-    with open(fname, 'r') as source:
+    with open(path_content, 'r', encoding='ISO-8859-1') as source:
 
         j_rows = csv.DictReader(source)
-        for row in j_rows:
+        for idx, row in enumerate(j_rows):
             if len(row) == 3:
                 words = row['content']
             elif len(row) > 3:
@@ -69,9 +48,10 @@ def load_both(fname):
                 print(idx)
 
             docs.append(words)
-            ndic[idx] = node.Node([words], name)
+            ndic[idx] = Node([words], name)
+            back.merge(ndic[idx])
 
-    return node.Node(docs, 'back'), ndic
+    return back, ndic
 
 
 
