@@ -92,3 +92,13 @@ if __name__ == "__main__":
     yellow("Hydra with number of keys => "+str(len(hydra.columns.keys())))
     yellow("Number of dup sets: "+str(len(dups)))
     yellow("total number books involved: "+str(total))
+
+def print_tree(node):
+    if not node.nexts:
+        return
+    else:
+        print("*"*node.depth, node.key, len(node.nexts))
+        for n in node.nexts:
+            print_tree(n)
+
+print_tree(hydra.n_init)
