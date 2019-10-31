@@ -24,7 +24,7 @@ if signal > len(base):
 df = df[df['keywords'].apply(
     lambda x: True if len(set(str(x).split()[:confidence]).intersection(base)) >= signal else False)]
 
-print(df.head(20))
+print(df[['id','name','keywords']].head(20))
 
 from collections import Counter
 ct = Counter()
@@ -33,7 +33,7 @@ def countem(_ct, st):
     return st 
 
 df['keywords'].apply(lambda x: countem(ct, x))
-
+print(df.columns)
 word_hits = ct.most_common()[:confidence]
 for word, count in word_hits[:signal]:
     print(count, '\t', word)
