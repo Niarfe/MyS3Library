@@ -18,6 +18,6 @@ with open(output_file, 'w') as target:
     for idx, fname in enumerate(fnames):
         text = open(input_dir+fname).read()
         text = pattern.sub(' ', text)
-        target.write("{},{},{}\n".format(idx, fname.replace('.txt', '.pdf'), text.strip().replace('\x00', '')))
+        target.write("{},{},{}\n".format(idx, fname.replace('.txt', '.pdf'), text.strip().replace('\x00', '').lower()))
         if idx % 100 == 0:
             print("done through ", idx)
