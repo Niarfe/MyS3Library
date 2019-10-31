@@ -17,6 +17,10 @@ else:
         if key == 'signal': signal = int(val)
         if key == 'base': base = set(val.split(','))
 
+if signal > len(base):
+    print("** Resetting signal to be length of base!")
+    signal = len(base)
+
 df = df[df['keywords'].apply(
     lambda x: True if len(set(str(x).split()[:confidence]).intersection(base)) >= signal else False)]
 
@@ -31,6 +35,6 @@ def countem(_ct, st):
 df['keywords'].apply(lambda x: countem(ct, x))
 
 word_hits = ct.most_common()[:confidence]
-for word, count in word_hits[:5]:
+for word, count in word_hits[:signal]:
     print(count, '\t', word)
-print(word_hits[5:])
+print(word_hits[signal:])
