@@ -21,3 +21,16 @@ df = df[df['keywords'].apply(
     lambda x: True if len(set(str(x).split()[:confidence]).intersection(base)) >= signal else False)]
 
 print(df.head(20))
+
+from collections import Counter
+ct = Counter()
+def countem(_ct, st):
+    _ct.update(str(st).split())
+    return st 
+
+df['keywords'].apply(lambda x: countem(ct, x))
+
+word_hits = ct.most_common()[:confidence]
+for word, count in word_hits[:5]:
+    print(count, '\t', word)
+print(word_hits[5:])
