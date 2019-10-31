@@ -11,11 +11,9 @@ Output:
     keyword_listing.csv:  file containing keyword output of neurons. csv: id, name, keywords (ranked in order left-right)
 
 """
-import theseus.node as node
 from theseus.node import Node
 import csv
 import sys
-from collections import OrderedDict
 csv.field_size_limit(sys.maxsize)
 
 
