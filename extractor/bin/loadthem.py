@@ -23,21 +23,14 @@ def create_nodes(path_content, ndic, back):
 
     for idx, row in enumerate(df.itertuples()):
         words = str(row.content).split()
-        print(words[:10])
         ndic[idx] = Node([words], row.name)
         back.merge(ndic[idx])
     return df
 
 def generate_keywords(df, ndic, back):
-    #df['keywords'] = ''
     print(df.columns)
+         
     df['keywords'] = df.apply(lambda row: " ".join(ndic[row['id']].create_profile(back, ratio=0.2)), axis=1)
-    #for idx, row in enumerate(df.itertuples()):
-    #    profile = ndic[idx].create_profile(back, ratio=0.2)
-    #    print(profile[:5])
-    #    row['keywords'] = " ".join(profile)
-
-    #print(df['keywords'].head(10))
     return df
 
 if __name__ == "__main__":
@@ -48,15 +41,7 @@ if __name__ == "__main__":
     ndic = {}
     back = Node()
     df = create_nodes(_source_file, ndic, back)
-    print("done loading, start keyword extraction for {} nodes".format(len(ndic)))
+    print("done loading, start keyword extraction for {}:{} nodes".format(len(ndic), len(df)))
    
     df = generate_keywords(df, ndic, back)
     df.to_csv('output/keywords_listing.csv')
-    #with open('output/keywords_listing.csv', 'w') as target:
-    #    target.write("id,name,keywords\n")
-    #    for idx, node in ndic.items():
-    #        print(idx, node.name)
-    #        target.write("{},{},{}\n".format(
-    #            idx, node.name, " ".join(node.create_profile(back, ratio=_ratio))
-    #            )
-    #        )

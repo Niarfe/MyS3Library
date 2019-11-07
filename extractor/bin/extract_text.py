@@ -30,7 +30,7 @@ def main(file_list):
             cmds = [
                     "echo == STARTING # {} ===".format(idx),
                     "aws s3 cp s3://eolibrary/books/{} .".format(fname),
-                    "pdftotext {}".format(fname),
+                    "pdftotext -eol unix -enc UTF-8 -nopgbrk {}".format(fname),
                     "dos2unix {}".format(fname.replace('.pdf', '.txt')),
                     "aws s3 mv {} s3://eolibrary/extractedbooks/".format(fname.replace(".pdf", ".txt")),
                     "rm {}".format(fname),

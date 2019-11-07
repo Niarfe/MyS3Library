@@ -21,13 +21,13 @@ def load_hydra(source_file, depth):
     with open(source_file, 'r') as source, open('output/ten.csv', 'w') as target:
        csv_src = csv.DictReader(source)
        for row in csv_src:
+           if len(row['keywords'].split()) <= 1:
+               continue
            name = row['name'].strip()
            short_version = " ".join( row['keywords'].split()[:depth] )
-           if len(short_version.strip().split()) == 0:
-               _debug("SHORT: ", name)
-               continue
            target.write(",".join([ row['id'], row['name'], short_version+'\n' ]))
            _debug("    load_hydra: inserting {}".format(short_version+' 0_'+name))
+
            hydra.insert(short_version+' 0_'+name)
     _debug("    load_hydra: returning hydra with number of keys => ", len(hydra.columns.keys()))
     return hydra
@@ -101,4 +101,4 @@ def print_tree(node):
         for n in node.nexts:
             print_tree(n)
 
-print_tree(hydra.n_init)
+#print_tree(hydra.n_init)
