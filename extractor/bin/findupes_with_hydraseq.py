@@ -75,9 +75,14 @@ if __name__ == "__main__":
         yellow("arguments: <source csv> <depth of keywords>")
         sys.exit(1)
 
+    dupe_count = []
+    for idx in range(depth):
+        hydra = load_hydra(source_file, idx)
+        dups = find_duplicates(hydra)
+        dupe_count.append(str(len(dups)))
+    print("Dupe count: ", dupe_count)
+
     hydra = load_hydra(source_file, depth)
-
-
     dups = find_duplicates(hydra)
 
     total = 0
@@ -85,7 +90,7 @@ if __name__ == "__main__":
         if len(dup) > 1:
             print(len(dup),"\t", " ".join(sorted(dup)))
         total += len(dup)
-
+    print([len([node for node in nodes if (len(node.nexts) > 1)]) for _, nodes in hydra.d_depths.items()])
     yellow("==== hydra dup search ===")
     yellow("Proceeding with file "+source_file)
     yellow("Required dup depth: "+str(depth))

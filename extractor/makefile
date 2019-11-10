@@ -21,7 +21,7 @@ output/content.csv:
 
 output/keywords_listing.csv:
 	@echo "take content.csv and output keywords_listing.csv:|id|name|keywords|"
-	time python bin/loadthem.py
+	time python bin/generate_keywords.py
 
 output/dupes.txt: output/keywords_listing.csv
 	@echo  "dupes.txt:|n-number-dupes name-1 name-2 name-n| plus summary at bottom"

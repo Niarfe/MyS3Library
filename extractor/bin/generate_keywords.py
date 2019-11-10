@@ -15,11 +15,19 @@ from theseus.node import Node
 import csv
 import sys
 import pandas as pd
+import pryzm as pz
 csv.field_size_limit(sys.maxsize)
+error = pz.Pryzm().red
 
 
 def create_nodes(path_content, ndic, back):
-    df = pd.read_csv(path_content)
+    """create all nodes, fill ndic with all line nodes and populate the back node"""
+    try:
+        df = pd.read_csv(path_content, encoding='ISO-8859-1')
+    except Exception as e:
+        error("Could not load dataframe from {}".format(path_content))
+        error("Forwarded exception message: {}".format(e))
+        sys.exit(1)
 
     for idx, row in enumerate(df.itertuples()):
         words = str(row.content).split()
