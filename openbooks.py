@@ -9,6 +9,7 @@ books = [
 "writing_an_interpreter_in_go_1.6.pdf",
 "the-ray-tracer-challenge_p1_0.pdf",
 "rediscovering-javascript_p1_0.pdf",
+"9781838645359-AI_CRASH_COURSE.pdf",
 ]
 
 for book in books:
