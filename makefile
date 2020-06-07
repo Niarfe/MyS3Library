@@ -18,3 +18,6 @@ clean_fluff:
 	find . -name __pycache__ || true
 
 full: clean_fluff auto_update
+
+desktop:	
+	python openbooks.py
