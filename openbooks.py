@@ -10,6 +10,8 @@ books = [
 "the-ray-tracer-challenge_p1_0.pdf",
 "rediscovering-javascript_p1_0.pdf",
 "9781838645359-AI_CRASH_COURSE.pdf",
+"Terraform_in_Action_v7.pdf",
+"Algorithms_and_Data_Structures_in_Action_v10.pdf",
 ]
 
 for book in books:
