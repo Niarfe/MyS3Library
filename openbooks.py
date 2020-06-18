@@ -15,6 +15,8 @@ books = [
 "Terraform_in_Action_v8_MEAP.pdf",
 "Algorithms_and_Data_Structures_in_Action_v11_MEAP.pdf",
 "Grokking_Artificial_Intelligence_Algorit_v5.pdf",
+"9781838825461-HANDSON_ONESHOT_LEARNING_WITH_PYTHON.pdf",
+"9781838984762-LEARN_SQL_DATABASE_PROGRAMMING.pdf",
 ]
 
 for book in books:
