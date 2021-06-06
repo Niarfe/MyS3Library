@@ -553,6 +553,7 @@ ARDUINO_ROBOTIC_PROJECTS.pdf
 ASTJournalPre.pdf
 A_Field_Guide_to_Genetic_Programming.pdf
 AdvancedAnalyticsWithSpark.pdf
+Advanced_Algorithms_and_Data_Structures.pdf
 Agile_Data_Science.pdf
 Alan_Beaulieu-Learning_SQL-EN.pdf
 Algorithmic_Puzzles.pdf
@@ -599,6 +600,7 @@ DevOps_Automation_Cookbook_[eBook].pdf
 Docker_Up_and_Running.pdf
 Docker__Up_
 Doing_Data_Science.pdf
+Domain-Specific_Languages_Made_Easy_v4.pdf
 EMNLP2014131.pdf
 ENG-WebSnippets-201016-1740.pdf
 Effective_Java__2nd_Edition.pdf
@@ -614,6 +616,7 @@ Flask_Web_Development.pdf
 From_Python_to_Numpy.pdf
 Front-end_Developer_Handbook_2019.pdf
 Fundamental_Deep_Learning_Preview_Zaloni.pdf
+Go_in_Action.pdf
 Gradle_Beyond_the_Basics.pdf
 Gradle_Effective_Implementation_Guide.pdf
 Gradle_in_Action.pdf
@@ -632,11 +635,13 @@ Hopfield.pdf
 How_Linux_Works_2nd_Ed.pdf
 IMPLEMENTING_LEAN_SIX_SIGMA_IN_30_DAYS.pdf
 INSTANT_MINECRAFT_PI_EDITION_CODING_HOWTO.pdf
+If-Hemingway-Wrote-JavaScript.pdf
 Instant_Flask_Web_Development.pdf
 Instant_Web_Scraping_with_Java.pdf
 IntelliJIDEA_ReferenceCard_mac.pdf
 Introducing_Elixir.pdf
 JAVA_7_NEW_FEATURES_COOKBOOK.pdf
+JavaScript-for-Kids.pdf
 JavaScriptTheGoodParts.pdf
 Java_Test-Driven_Development.pdf
 Java_Testing_with_Spock.pdf
@@ -751,6 +756,7 @@ algorithms-in-python.pdf
 algorithms.pdf
 algorithms_cormen_3rd.pdf
 algorithms_for_decision_making.pdf
+angular_upandrunning.pdf
 atom_flight_manual_160211.pdf
 ats-vs-ghkm.pdf
 automatetheboringstuffwithpython2ndedition.pdf
@@ -766,12 +772,17 @@ conda-cheatsheet.pdf
 cracking_code_inerview_4th.pdf
 crackingcodeswithpython.pdf
 crf.pdf
+css_thedefinitiveguide4thedition.pdf
 cssanimation-101.pdf
+csspocketreference5thedition.pdf
 cucs-002-10.pdf
+datavisualizationwithpythonandjavascript.pdf
 deeplearningbook.pdf
 design-patterns-ruby.pdf
+designingwebapis.pdf
 disambiguation.pdf
 disambiguation2.pdf
+distributedsystemswithnodejs.pdf
 doingmathwithpython.pdf
 effective-python.pdf
 effective-ruby.pdf
@@ -788,6 +799,7 @@ exercises-for-programmers_p1_0.pdf
 eye_of_revelation_01.pdf
 fall2014-loglineartaggers.pdf
 fb.pdf
+flaskwebdevelopment2ndedition.pdf
 functional-light-javascript.pdf
 functional_programming_for_java_developers.pdf
 future-of-machine-intelligence.pdf
@@ -816,9 +828,14 @@ javascript_cookbook.pdf
 javascript_patterns.pdf
 jinja-palletsprojects-com-en-2.11.x.pdf
 language-implementation-patterns_p5_0.pdf
+lawsofux.pdf
 ldow2014_paper_03.pdf
 learn-game-programming-with-ruby_p1_0.pdf
 learning-text-similarity-with-siamese-recurrent-networks.pdf
+learninggraphql.pdf
+learningjavascript3rdedition.pdf
+learningphpmysqlandjavascript5thedition.pdf
+learningreact1.pdf
 learntoprogramwithminecraft.pdf
 learnvimscriptthehardway.pdf
 lexpcfgs.pdf
@@ -830,6 +847,7 @@ loglinear.pdf
 mac_kung_fu_2nd_edition.pdf
 make_javascriptrobotics_optimized.pdf
 makingthingstalk.pdf
+masteringmodularjavascript.pdf
 mathadventureswithpython.pdf
 mazes-for-programmers.p1_0.pdf
 metaprogramming-ruby_p4_0.pdf
@@ -865,6 +883,7 @@ pragmatic-version-control-using-git_p3_0.pdf
 principles_of_data_wrangling.pdf
 probabilisticContextFreeModels.pdf
 programming-ruby-1-9_p5_0.pdf
+programmingtypescript.pdf
 prolog-notes.pdf
 python-crash-course.pdf
 python-testing-with-pytest_p2_0.pdf
@@ -905,6 +924,7 @@ tmux_p3_0.pdf
 understanding-machine-learning-theory-algorithms.pdf
 using-semantic-fingerprints-in-finance.pdf
 vi_and_vim_editors_pocket_reference_second_edition.pdf
+vuejs_upandrunning.pdf
 what-is-artificial-intelligence.pdf
 wikifier.pdf
 working-with-tcp-sockets_p1_0.pdf
