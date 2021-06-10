@@ -47,6 +47,7 @@
 9781782162148-MACHINE_LEARNING_WITH_R.pdf
 9781782162742-LINUX_SHELL_SCRIPTING_COOKBOOK_SECOND_EDITION.pdf
 9781782163008-LINUX_UTILITIES_COOKBOOK.pdf
+9781782163145-LEARNING_JQUERY_FOURTH_EDITION.pdf
 9781782163282-BIG_DATA_ANALYTICS_WITH_R_AND_HADOOP.pdf
 9781782163367-PYTHON_DATA_VISUALIZATION_COOKBOOK.pdf
 9781782164364-PYTHON_WEB_SCRAPING.pdf
@@ -65,6 +66,7 @@
 9781782168096-GETTING_STARTED_WITH_MARIADB.pdf
 9781782168454-GIT_VERSION_CONTROL_COOKBOOK.pdf
 9781782168812-INSTANT_OPENCV_STARTER.pdf
+9781782169161-LEARNING_RAPHAEL_JS_VECTOR_GRAPHICS.pdf
 9781782172550-SQL_SERVER_2014_DEVELOPMENT_ESSENTIALS.pdf
 9781782173434-LEARNING_BIG_DATA_WITH_AMAZON_ELASTIC_MAPREDUCE.pdf
 9781782173755-AWS_ADMINISTRATION_THE_DEFINITIVE_GUIDE.pdf
@@ -577,7 +579,6 @@ Building_and_Testing_with_Gradle.pdf
 CLEAN_DATA.pdf
 CSS_Cookbook_3rd.pdf
 Classic_Computer_Science_Problems_in_Pyt.pdf
-Classic_Computer_Science_Problems_in_Pyt_v4.pdf
 Clean_Code.pdf
 Clean_code_extended.pdf
 CleverAlgorithms_Brownlee_2012.pdf
@@ -600,7 +601,7 @@ DevOps_Automation_Cookbook_[eBook].pdf
 Docker_Up_and_Running.pdf
 Docker__Up_
 Doing_Data_Science.pdf
-Domain-Specific_Languages_Made_Easy_v4.pdf
+Domain-Specific_Languages_Made_Easy_v5_MEAP.pdf
 EMNLP2014131.pdf
 ENG-WebSnippets-201016-1740.pdf
 Effective_Java__2nd_Edition.pdf
@@ -610,6 +611,8 @@ Elm_in_Action_v9.pdf
 Eloquent_JavaScript.pdf
 Essentials_Games_v1.pdf
 ExactDecodingPhraseBasedTranslationModels.pdf
+Exploring_Algorithms.pdf
+Exploring_Math_for_Programmers_and_Data_.pdf
 Exploring_Serverless_Applications_with_N.pdf
 Fast_Data_Processing_with_Spark_2nd_Edition.pdf
 Flask_Web_Development.pdf
@@ -622,7 +625,6 @@ Gradle_Effective_Implementation_Guide.pdf
 Gradle_in_Action.pdf
 Graph_Algorithms_Neo4j.pdf
 Grokking_Artificial_Intelligence_Algorit.pdf
-Grokking_Artificial_Intelligence_Algorit_v5.pdf
 GuzmanEtAl2016.1117.full.pdf
 HTML5_GAMES_DEVELOPMENT_BY_EXAMPLE_BEGINNERS_GUI.pdf
 HTML5_GAME_DEVELOPMENT_HOTSHOT.pdf
@@ -679,8 +681,6 @@ Mining_the_Social_Web__Second_Edition_-_Russell__Matthew_A.pdf
 MySQL_Cookbook_3rd_Edition.pdf
 NaturalLanguageProcessingWithPython.pdf
 Natural_Language_Processing_in_Action.pdf
-Natural_Language_Processing_in_Action_v3_MEAP.pdf
-Natural_Language_Processing_in_Action_v7_MEAP.pdf
 Natural_Language_Processing_with_Java.pdf
 Nature_Inspired_Optimization_Algorithms.pdf
 Never-Split-the-Difference_-Negotiating-As-If-Your-Life-Depended-On-It-PDFDrive.com-.pdf
@@ -733,8 +733,7 @@ SonarQube.pdf
 Statistics_in_a_Nutshell_Second_Edition.pdf
 Syngress.The.Basics.of.Hacking.and.Penetration.Testing.Aug.2011.pdf
 TKINTER_GUI_APPLICATION_DEVELOPMENT_BLUEPRINTS.pdf
-Terraform_in_Action_v7.pdf
-Terraform_in_Action_v8_MEAP.pdf
+Terraform_in_Action.pdf
 The-Data-Engineers-Guide-to-Apache-Spark.pdf
 TheEyeOfRevelation_1939_and_1946_Edition.pdf
 The_AWK_Programming_Language.pdf
