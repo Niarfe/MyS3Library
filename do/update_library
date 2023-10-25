@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ~/.aws/.init_book_session
+. init_book_session
 
 aws s3 ls $S3_BOOK_LOCATION > library
 

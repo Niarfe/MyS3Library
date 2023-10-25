@@ -3,7 +3,7 @@
 # if not have it, download it
 if [ ! -f bookshelf/$1 ];then
   echo Downloading $1 from s3...
-  . ~/.aws/.init_book_session > /dev/null 1>&2
+  . init_book_session > /dev/null 1>&2
   aws s3 cp ${S3_BOOK_LOCATION}$1 bookshelf/
   echo Done!
 else
