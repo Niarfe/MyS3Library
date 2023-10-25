@@ -1,6 +1,0 @@
-export AWS_ACCESS_KEY_ID=
-export AWS_SECRET_ACCESS_KEY=
-export AWS_DEFAULT_REGION=us-west-2
-
-export S3_BOOK_LOCATION=s3://eolibrary/books/
-export S3_CODE_LOCATION=s3://eolibrary/code/
